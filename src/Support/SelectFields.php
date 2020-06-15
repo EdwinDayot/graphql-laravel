@@ -253,7 +253,7 @@ class SelectFields
 
         // If parent type is an union or interface we select all fields
         // because we don't know which other fields are required
-        if (is_a($parentType, UnionType::class) || is_a($parentType, \GraphQL\Type\Definition\InterfaceType::class)) {
+        if (is_a($parentType, UnionType::class)/* || is_a($parentType, \GraphQL\Type\Definition\InterfaceType::class)*/) {
             $select = ['*'];
         }
     }
